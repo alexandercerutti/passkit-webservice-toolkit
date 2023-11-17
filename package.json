@@ -1,0 +1,20 @@
+{
+	"name": "passkit-webservice-toolkit",
+	"version": "1.0.0",
+	"description": "Integrate Apple Wallet Service with ease",
+	"type": "module",
+	"scripts": {
+		"build": "pnpm tsc"
+	},
+	"keywords": [
+		"apple wallet",
+		"passkit",
+		"passbook"
+	],
+	"author": "Alexander Patrick Cerutti",
+	"license": "MIT",
+	"devDependencies": {
+		"prettier": "^3.1.0",
+		"typescript": "^5.2.2"
+	}
+}
