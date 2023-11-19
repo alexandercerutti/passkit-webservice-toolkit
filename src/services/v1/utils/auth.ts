@@ -1,21 +1,27 @@
 /**
  * Utility to extract the Autorization token by the
- * header, while performing minimum validation
+ * header, while performing minimum validation.
  *
+ * @throws if scheme is invalid
+ * @throws if the token is empty
  * @param authorizationString
  * @returns
  */
 
-export function getAuthorizationToken(
-	authorizationString: string,
-): string | undefined {
+export function getAuthorizationToken(authorizationString: string): string {
 	const authorization = authorizationString || "";
 
 	const [authorizationScheme, passAuthorizationToken] =
 		authorization.split("\x20");
 
 	if (!isAuthorizationSchemeValid(authorizationScheme)) {
-		return undefined;
+		throw new Error(
+			`Authorization header verification: expected 'ApplePass' but received '${authorizationScheme}.'`,
+		);
+	}
+
+	if (!passAuthorizationToken.length) {
+		throw new Error("Authorization header verification: no token found.");
 	}
 
 	return passAuthorizationToken;
