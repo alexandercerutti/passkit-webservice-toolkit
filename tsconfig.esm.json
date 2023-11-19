@@ -1,15 +1,12 @@
 {
+	"extends": "./tsconfig.json",
 	"compilerOptions": {
 		"target": "ES2018",
 		"module": "Node16",
 		"moduleResolution": "Node16",
 		"sourceMap": true,
-		"outDir": "lib",
-		"newLine": "lf",
-		"esModuleInterop": true,
-		"forceConsistentCasingInFileNames": true,
-		"strict": true,
-		"importHelpers": true
+		"outDir": "lib/esm",
+		"declaration": true
 	},
 	"include": ["src/**/*"]
 }

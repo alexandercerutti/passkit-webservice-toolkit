@@ -2,9 +2,10 @@
 	"name": "passkit-webservice-toolkit",
 	"version": "1.0.0",
 	"description": "Integrate Apple Wallet Service with ease",
+	"main": "lib/cjs/index.mjs",
 	"type": "module",
 	"scripts": {
-		"build": "rm -rf lib && pnpm tsc"
+		"build": "rm -rf lib && pnpm tsc -b tsconfig.esm.json tsconfig.cjs.json"
 	},
 	"keywords": [
 		"apple wallet",
@@ -17,9 +18,21 @@
 		"prettier": "^3.1.0",
 		"typescript": "^5.2.2"
 	},
+	"dependencies": {
+		"tslib": "^2.6.2"
+	},
 	"exports": {
-		"import": {
-			"/v1/*": "./lib/services/v1"
+		".": {
+			"import": "./lib/esm/index.js",
+			"require": "./lib/cjs/index.js"
+		},
+		"./v1": {
+			"import": "./lib/esm/services/index.js",
+			"require": "./lib/cjs/services/index.js"
+		},
+		"./v1/*": {
+			"import": "./lib/esm/services/v1/*",
+			"require": "./lib/cjs/services/v1/*"
 		}
 	}
 }
