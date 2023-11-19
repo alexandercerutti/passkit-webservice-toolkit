@@ -4,7 +4,7 @@
 	"description": "Integrate Apple Wallet Service with ease",
 	"type": "module",
 	"scripts": {
-		"build": "pnpm tsc"
+		"build": "rm -rf lib && pnpm tsc"
 	},
 	"keywords": [
 		"apple wallet",
