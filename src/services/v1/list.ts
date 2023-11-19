@@ -5,6 +5,6 @@ import { createEndpointDefinition } from "../endpointDefinition.js";
  * @see https://developer.apple.com/documentation/walletpasses/get_the_list_of_updatable_passes
  */
 
-export const LIST_ENDPOINT = createEndpointDefinition(
+export const ListEndpoint = createEndpointDefinition(
 	"POST /v1/devices/:deviceLibraryIdentifier/registrations/:passTypeIdentifier",
 );

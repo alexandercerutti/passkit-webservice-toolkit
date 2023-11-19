@@ -5,6 +5,6 @@ import { createEndpointDefinition } from "../endpointDefinition.js";
  * @see https://developer.apple.com/documentation/walletpasses/register_a_pass_for_update_notifications
  */
 
-export const REGISTER_ENDPOINT = createEndpointDefinition(
+export const RegisterEndpoint = createEndpointDefinition(
 	"POST /v1/devices/:deviceLibraryIdentifier/registrations/:passTypeIdentifier/:serialNumber",
 );

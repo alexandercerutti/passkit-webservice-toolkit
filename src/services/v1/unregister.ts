@@ -5,6 +5,6 @@ import { createEndpointDefinition } from "../endpointDefinition.js";
  * @see https://developer.apple.com/documentation/walletpasses/unregister_a_pass_for_update_notifications
  */
 
-export const UNREGISTER_ENDPOINT = createEndpointDefinition(
+export const UnregisterEndpoint = createEndpointDefinition(
 	"DELETE /v1/devices/:deviceLibraryIdentifier/registrations/:passTypeIdentifier/:serialNumber",
 );

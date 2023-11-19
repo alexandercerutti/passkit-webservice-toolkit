@@ -5,6 +5,6 @@ import { createEndpointDefinition } from "../endpointDefinition.js";
  * @see https://developer.apple.com/documentation/walletpasses/send_an_updated_pass
  */
 
-export const UPDATE_PASS_ENDPOINT = createEndpointDefinition(
+export const UpdateEndpoint = createEndpointDefinition(
 	"GET /v1/passes/:passTypeIdentifier/:serialNumber",
 );

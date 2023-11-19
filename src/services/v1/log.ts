@@ -5,4 +5,4 @@ import { createEndpointDefinition } from "../endpointDefinition.js";
  * @see https://developer.apple.com/documentation/walletpasses/log_a_message
  */
 
-export const LOG_ENDPOINT = createEndpointDefinition("POST /v1/log");
+export const LogEndpoint = createEndpointDefinition("POST /v1/log");
