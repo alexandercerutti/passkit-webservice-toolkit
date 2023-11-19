@@ -8,11 +8,11 @@ type ExtractParamsFromEndpoint<T extends string> =
 		  : [];
 
 type EndpointDefinition<T extends string> =
-	T extends `${infer Method}\x20${infer Endpoint}`
+	T extends `${infer Method}\x20${infer Path}`
 		? {
 				method: Method;
-				endpoint: Endpoint;
-				params: ExtractParamsFromEndpoint<Endpoint>;
+				path: Path;
+				params: ExtractParamsFromEndpoint<Path>;
 				toString(): T;
 		  }
 		: never;
@@ -20,16 +20,16 @@ type EndpointDefinition<T extends string> =
 export function createEndpointDefinition<const T extends string>(
 	signature: T,
 ): EndpointDefinition<T> {
-	const [method, endpoint] = signature.split("\x20");
+	const [method, path] = signature.split("\x20");
 
-	const params = endpoint
+	const params = path
 		.split("/")
 		.filter((section) => section.startsWith(":"))
 		.map((param) => param.slice(1));
 
 	return {
 		method,
-		endpoint,
+		path,
 		params,
 		toString() {
 			return signature;
