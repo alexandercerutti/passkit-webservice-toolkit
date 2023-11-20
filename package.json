@@ -42,5 +42,8 @@
 			"import": "./lib/esm/services/v1/*",
 			"require": "./lib/cjs/services/v1/*"
 		}
-	}
+	},
+	"files": [
+		"lib/**/*.+(js|d.ts)!(*.map)"
+	]
 }
