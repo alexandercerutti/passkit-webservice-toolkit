@@ -13,6 +13,7 @@
 		"test:prepare": "pnpm build && pnpm link .",
 		"test:cleanup": "pnpm unlink passkit-webservice-toolkit"
 	},
+	"repository": "https://github.com/alexandercerutti/passkit-webservice-toolkit",
 	"keywords": [
 		"apple wallet",
 		"passkit",
