@@ -2,15 +2,17 @@
  * index.js barrel file imports
  */
 
-import {
-	ListEndpoint as IBListEndpoint,
-	LogEndpoint as IBLogEndpoint,
-	RegisterEndpoint as IBRegisterEndpoint,
-	UnregisterEndpoint as IBUnregisterEndpoint,
-	UpdateEndpoint as IBUpdateEndpoint,
-	getAuthorizationToken as IBgetAuthorizationToken,
-	isAuthorizationSchemeValid as IBisAuthorizationSchemeValid,
-} from "passkit-webservice-toolkit";
+import { v1 as IBv1 } from "passkit-webservice-toolkit";
+
+const {
+	ListEndpoint: IBListEndpoint,
+	LogEndpoint: IBLogEndpoint,
+	RegisterEndpoint: IBRegisterEndpoint,
+	UnregisterEndpoint: IBUnregisterEndpoint,
+	UpdateEndpoint: IBUpdateEndpoint,
+	getAuthorizationToken: IBgetAuthorizationToken,
+	isAuthorizationSchemeValid: IBisAuthorizationSchemeValid,
+} = IBv1;
 
 /**
  * V1 Entrypoint tests

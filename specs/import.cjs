@@ -5,13 +5,15 @@
  */
 
 const {
-	ListEndpoint: IBListEndpoint,
-	LogEndpoint: IBLogEndpoint,
-	RegisterEndpoint: IBRegisterEndpoint,
-	UnregisterEndpoint: IBUnregisterEndpoint,
-	UpdateEndpoint: IBUpdateEndpoint,
-	getAuthorizationToken: IBgetAuthorizationToken,
-	isAuthorizationSchemeValid: IBisAuthorizationSchemeValid,
+	v1: {
+		ListEndpoint: IBListEndpoint,
+		LogEndpoint: IBLogEndpoint,
+		RegisterEndpoint: IBRegisterEndpoint,
+		UnregisterEndpoint: IBUnregisterEndpoint,
+		UpdateEndpoint: IBUpdateEndpoint,
+		getAuthorizationToken: IBgetAuthorizationToken,
+		isAuthorizationSchemeValid: IBisAuthorizationSchemeValid,
+	},
 } = require("passkit-webservice-toolkit");
 
 /**
