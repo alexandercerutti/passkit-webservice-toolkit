@@ -6,10 +6,8 @@
 	"scripts": {
 		"build": "rm -rf lib && pnpm tsc -b tsconfig.esm.json tsconfig.cjs.json && pnpm build:dual",
 		"build:dual": "tsconfig-to-dual-package tsconfig.esm.json tsconfig.cjs.json",
-		"test": "pnpm test:prepare && pnpm test:ts && pnpm test:esm && pnpm test:cjs && pnpm test:cleanup",
+		"test": "pnpm test:prepare && pnpm test:ts && node --test && pnpm test:cleanup",
 		"test:ts": "pnpm tsc --noEmit --allowJs --checkJs",
-		"test:esm": "node specs/import.mjs",
-		"test:cjs": "node specs/import.cjs",
 		"test:prepare": "pnpm build && pnpm link .",
 		"test:cleanup": "pnpm unlink passkit-webservice-toolkit"
 	},
