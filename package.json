@@ -1,6 +1,6 @@
 {
 	"name": "passkit-webservice-toolkit",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Integrate Apple Wallet Service with ease",
 	"type": "module",
 	"main": "./lib/cjs/index.js",
