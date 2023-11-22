@@ -3,6 +3,7 @@
 	"version": "1.0.1",
 	"description": "Integrate Apple Wallet Service with ease",
 	"type": "module",
+	"main": "./lib/cjs/index.js",
 	"scripts": {
 		"build": "rm -rf lib && pnpm tsc -b tsconfig.esm.json tsconfig.cjs.json && pnpm build:dual",
 		"build:dual": "tsconfig-to-dual-package tsconfig.esm.json tsconfig.cjs.json",
