@@ -6,6 +6,7 @@
 	"main": "./lib/cjs/index.js",
 	"scripts": {
 		"build": "rm -rf lib && pnpm tsc -b tsconfig.esm.json tsconfig.cjs.json && pnpm build:dual",
+		"prepublish": "pnpm build",
 		"build:dual": "tsconfig-to-dual-package tsconfig.esm.json tsconfig.cjs.json",
 		"test": "pnpm test:prepare && pnpm test:ts && node --test && pnpm test:cleanup",
 		"test:ts": "pnpm tsc --noEmit --allowJs --checkJs",
