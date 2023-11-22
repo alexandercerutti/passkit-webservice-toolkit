@@ -30,4 +30,4 @@ All the exposed informations are detailed in the Wiki.
 
 Did you develop an integration that uses this package? Open a Pull Request to add it here!
 
-- _TODO_
+- [Fastify Passkit Webservice](https://github.com/alexandercerutti/fastify-passkit-webservice)
