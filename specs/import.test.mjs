@@ -114,7 +114,7 @@ describe("ESM Import", () => {
 			);
 
 			strictEqual(typeof ListEndpoint, "object");
-			strictEqual(ListEndpoint.method, "POST");
+			strictEqual(ListEndpoint.method, "GET");
 		});
 
 		it("should import endpoint from v1 entry point", async () => {
@@ -124,7 +124,7 @@ describe("ESM Import", () => {
 			);
 
 			strictEqual(typeof ListEndpoint, "object");
-			strictEqual(ListEndpoint.method, "POST");
+			strictEqual(ListEndpoint.method, "GET");
 		});
 
 		it("should import v1 endpoint from global package entry", async () => {
@@ -136,7 +136,7 @@ describe("ESM Import", () => {
 			);
 
 			strictEqual(typeof ListEndpoint, "object");
-			strictEqual(ListEndpoint.method, "POST");
+			strictEqual(ListEndpoint.method, "GET");
 		});
 	});
 

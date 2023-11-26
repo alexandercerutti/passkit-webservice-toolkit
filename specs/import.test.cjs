@@ -101,7 +101,7 @@ describe("CJS require", () => {
 			const { ListEndpoint } = require("passkit-webservice-toolkit/v1/list.js");
 
 			strictEqual(typeof ListEndpoint, "object");
-			strictEqual(ListEndpoint.method, "POST");
+			strictEqual(ListEndpoint.method, "GET");
 		});
 
 		it("should import endpoint from v1 entry point", async () => {
@@ -109,7 +109,7 @@ describe("CJS require", () => {
 			const { ListEndpoint } = require("passkit-webservice-toolkit/v1");
 
 			strictEqual(typeof ListEndpoint, "object");
-			strictEqual(ListEndpoint.method, "POST");
+			strictEqual(ListEndpoint.method, "GET");
 		});
 
 		it("should import v1 endpoint from global package entry", async () => {
@@ -119,7 +119,7 @@ describe("CJS require", () => {
 			} = require("passkit-webservice-toolkit");
 
 			strictEqual(typeof ListEndpoint, "object");
-			strictEqual(ListEndpoint.method, "POST");
+			strictEqual(ListEndpoint.method, "GET");
 		});
 	});
 
