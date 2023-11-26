@@ -1,5 +1,13 @@
 # Changelog
 
+### **1.0.3**
+
+**Bug fix**:
+
+- Fixed `list` endpoint method: was mistakenly set to POST instead of GET;
+
+---
+
 ### **1.0.2**
 
 **Changes**:
