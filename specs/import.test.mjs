@@ -1,5 +1,3 @@
-// @ts-check
-
 import { describe, it } from "node:test";
 import { strictEqual } from "node:assert";
 

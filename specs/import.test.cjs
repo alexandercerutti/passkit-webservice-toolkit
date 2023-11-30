@@ -1,4 +1,3 @@
-// @ts-check
 /// <reference types="node" />
 
 const { describe, it } = require("node:test");
