@@ -31,3 +31,4 @@ All the exposed informations are detailed in the Wiki.
 Did you develop an integration that uses this package? Open a Pull Request to add it here!
 
 - [Fastify Passkit Webservice](https://github.com/alexandercerutti/fastify-passkit-webservice)
+- [Express Passkit Webservice](https://github.com/alexandercerutti/express-passkit-webservice)
