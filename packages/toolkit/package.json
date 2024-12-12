@@ -1,0 +1,46 @@
+{
+	"name": "passkit-webservice-toolkit",
+	"version": "1.0.3",
+	"description": "Integrate Apple Wallet Service with ease",
+	"type": "module",
+	"main": "./lib/cjs/index.js",
+	"scripts": {
+		"build": "rm -rf lib && pnpm tsc -b tsconfig.esm.json tsconfig.cjs.json && pnpm build:dual",
+		"prepublish": "pnpm build",
+		"build:dual": "pnpm tsconfig-to-dual-package tsconfig.esm.json tsconfig.cjs.json",
+		"test": "pnpm test:prepare && pnpm test:ts && node --test && pnpm test:cleanup",
+		"test:ts": "pnpm tsc --noEmit --allowJs --checkJs",
+		"test:prepare": "pnpm build && pnpm link .",
+		"test:cleanup": "pnpm unlink passkit-webservice-toolkit"
+	},
+	"keywords": [
+		"apple wallet",
+		"passkit",
+		"passbook"
+	],
+	"author": "Alexander Patrick Cerutti",
+	"license": "MIT",
+	"devDependencies": {
+		"tsconfig-to-dual-package": "^1.2.0"
+	},
+	"dependencies": {
+		"tslib": "^2.6.2"
+	},
+	"exports": {
+		".": {
+			"import": "./lib/esm/index.js",
+			"require": "./lib/cjs/index.js"
+		},
+		"./v1": {
+			"import": "./lib/esm/services/v1/index.js",
+			"require": "./lib/cjs/services/v1/index.js"
+		},
+		"./v1/*": {
+			"import": "./lib/esm/services/v1/*",
+			"require": "./lib/cjs/services/v1/*"
+		}
+	},
+	"files": [
+		"lib/**/*.+(js|d.ts)!(*.map)"
+	]
+}

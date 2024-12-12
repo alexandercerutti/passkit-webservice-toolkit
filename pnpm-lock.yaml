@@ -4,24 +4,29 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  tslib:
-    specifier: ^2.6.2
-    version: 2.6.2
+importers:
 
-devDependencies:
-  '@types/node':
-    specifier: ^20.9.2
-    version: 20.9.2
-  prettier:
-    specifier: ^3.1.0
-    version: 3.1.0
-  tsconfig-to-dual-package:
-    specifier: ^1.2.0
-    version: 1.2.0(typescript@5.2.2)
-  typescript:
-    specifier: ^5.2.2
-    version: 5.2.2
+  .:
+    devDependencies:
+      '@types/node':
+        specifier: ^20.9.2
+        version: 20.9.2
+      prettier:
+        specifier: ^3.1.0
+        version: 3.1.0
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
+  packages/toolkit:
+    dependencies:
+      tslib:
+        specifier: ^2.6.2
+        version: 2.6.2
+    devDependencies:
+      tsconfig-to-dual-package:
+        specifier: ^1.2.0
+        version: 1.2.0(typescript@5.2.2)
 
 packages:
 
