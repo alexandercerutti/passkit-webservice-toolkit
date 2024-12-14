@@ -1,12 +1,9 @@
 {
 	"extends": "./tsconfig.json",
 	"compilerOptions": {
-		"target": "ES2018",
 		"module": "CommonJS",
 		"moduleResolution": "Node10",
-		"sourceMap": true,
-		"outDir": "lib/cjs",
-		"declaration": true
+		"outDir": "lib/cjs"
 	},
 	"include": ["src/**/*"]
 }

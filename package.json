@@ -9,7 +9,7 @@
 	"repository": "https://github.com/alexandercerutti/passkit-webservice-toolkit",
 	"author": "Alexander Patrick Cerutti",
 	"devDependencies": {
-		"@types/node": "^20.9.2",
+		"@types/node": "^20.10.0",
 		"prettier": "^3.1.0",
 		"typescript": "^5.2.2"
 	}

@@ -31,6 +31,7 @@
 		"url": "github:alexandercerutti/passkit-webservice-toolkit",
 		"directory": "packages/toolkit"
 	},
+	"bugs": "https://github.com/alexandercerutti/passkit-webservice-toolkit/issues",
 	"exports": {
 		".": {
 			"import": "./lib/esm/index.js",
