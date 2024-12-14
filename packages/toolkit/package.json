@@ -26,6 +26,11 @@
 	"dependencies": {
 		"tslib": "^2.6.2"
 	},
+	"repository": {
+		"type": "git",
+		"url": "github:alexandercerutti/passkit-webservice-toolkit",
+		"directory": "packages/toolkit"
+	},
 	"exports": {
 		".": {
 			"import": "./lib/esm/index.js",
