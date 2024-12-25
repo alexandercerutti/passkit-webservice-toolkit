@@ -16,7 +16,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "github:alexandercerutti/passkit-webservice-toolkit",
+		"url": "https://github.com/alexandercerutti/passkit-webservice-toolkit",
 		"directory": "packages/fastify"
 	},
 	"bugs": "https://github.com/alexandercerutti/passkit-webservice-toolkit/issues",

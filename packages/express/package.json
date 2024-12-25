@@ -20,7 +20,7 @@
 	"author": "Alexander Patrick Cerutti",
 	"repository": {
 		"type": "git",
-		"url": "github:alexandercerutti/passkit-webservice-toolkit",
+		"url": "https://github.com/alexandercerutti/passkit-webservice-toolkit",
 		"directory": "packages/express"
 	},
 	"bugs": "https://github.com/alexandercerutti/passkit-webservice-toolkit/issues",
