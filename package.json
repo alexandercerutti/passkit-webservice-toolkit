@@ -4,11 +4,16 @@
 	"description": "Collection of libraries to build integration with Apple Wallet Web Services",
 	"scripts": {
 		"build": "pnpm -r build",
-		"test": "pnpm -r test"
+		"test": "pnpm -r test",
+		"bump": "pnpm lerna version",
+		"release": "pnpm lerna publish from-git"
 	},
 	"repository": "https://github.com/alexandercerutti/passkit-webservice-toolkit",
 	"author": "Alexander Patrick Cerutti",
 	"devDependencies": {
+		"@lerna-lite/cli": "^3.10.1",
+		"@lerna-lite/publish": "^3.10.1",
+		"@lerna-lite/version": "^3.10.1",
 		"@types/node": "^20.10.0",
 		"prettier": "^3.1.0",
 		"typescript": "^5.2.2"
