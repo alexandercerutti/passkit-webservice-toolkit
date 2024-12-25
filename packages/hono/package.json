@@ -1,6 +1,6 @@
 {
 	"name": "hono-passkit-webservice",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Hono.dev integration for Apple Wallet web services",
 	"main": "lib/index.js",
 	"scripts": {
