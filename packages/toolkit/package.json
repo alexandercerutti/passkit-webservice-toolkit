@@ -1,6 +1,6 @@
 {
 	"name": "passkit-webservice-toolkit",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Integrate Apple Wallet Service with ease",
 	"type": "module",
 	"main": "./lib/cjs/index.js",
@@ -19,8 +19,8 @@
 	"author": "Alexander Patrick Cerutti",
 	"license": "MIT",
 	"devDependencies": {
-		"tsconfig-to-dual-package": "^1.2.0",
-		"passkit-webservice-toolkit": "workspace:*"
+		"passkit-webservice-toolkit": "workspace:*",
+		"tsconfig-to-dual-package": "^1.2.0"
 	},
 	"dependencies": {
 		"tslib": "^2.6.2"

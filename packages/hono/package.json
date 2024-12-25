@@ -1,6 +1,6 @@
 {
 	"name": "hono-passkit-webservice",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Hono.dev integration for Apple Wallet web services",
 	"main": "lib/index.js",
 	"scripts": {
@@ -27,9 +27,9 @@
 	"type": "module",
 	"license": "MIT",
 	"devDependencies": {
-		"hono-passkit-webservice": "workspace:*",
 		"@hono/node-server": "^1.13.4",
 		"hono": "^4.6.8",
+		"hono-passkit-webservice": "workspace:*",
 		"passkit-generator": "^3.2.0"
 	},
 	"peerDependencies": {

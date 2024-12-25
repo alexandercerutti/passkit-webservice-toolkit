@@ -1,6 +1,6 @@
 {
 	"name": "fastify-passkit-webservice",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"description": "Fastify integration of Apple Wallet web services",
 	"scripts": {
 		"build": "rm -rf lib && pnpm tsc",
@@ -24,8 +24,8 @@
 	"author": "Alexander Patrick Cerutti",
 	"license": "ISC",
 	"devDependencies": {
-		"fastify-passkit-webservice": "workspace:*",
 		"fastify": "^5.1.0",
+		"fastify-passkit-webservice": "workspace:*",
 		"passkit-generator": "^3.1.11"
 	},
 	"peerDependencies": {
