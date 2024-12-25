@@ -37,7 +37,7 @@ import Fastify from "fastify";
 
 const app = Fastify();
 
-app.register(import("../lib/plugins/v1/registration.js"), {
+app.register(import("fastify-passkit-webservice/v1/registration.js"), {
 	async onRegister(
 		deviceLibraryIdentifier,
 		passTypeIdentifier,
