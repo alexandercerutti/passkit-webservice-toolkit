@@ -13,4 +13,4 @@ Each package implements the endpoints defined by Apple in its [documentation](ht
 ## API Documentation
 
 The API is kept as much as similar as possible among all the packages (except the toolkit).
-A page for each integration is available.
+It can be found in the [wiki](https://github.com/alexandercerutti/passkit-webservice-toolkit/wiki). Differences between packages will be highlighted.

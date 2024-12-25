@@ -1,0 +1,52 @@
+{
+	"name": "hono-passkit-webservice",
+	"version": "1.0.0",
+	"description": "Hono.dev integration for Apple Wallet web services",
+	"main": "lib/index.js",
+	"scripts": {
+		"build": "rm -rf lib && pnpm tsc",
+		"test": "pnpm build && node --test",
+		"run:server": "node --inspect specs/server.mjs",
+		"prepublish": "pnpm test"
+	},
+	"keywords": [
+		"Apple",
+		"Passkit",
+		"Wallet",
+		"Pass",
+		"passbook",
+		"hono"
+	],
+	"author": "Alexander Patrick Cerutti",
+	"repository": {
+		"type": "git",
+		"url": "github:alexandercerutti/passkit-webservice-toolkit",
+		"directory": "packages/hono"
+	},
+	"bugs": "https://github.com/alexandercerutti/passkit-webservice-toolkit/issues",
+	"type": "module",
+	"license": "MIT",
+	"devDependencies": {
+		"hono-passkit-webservice": "workspace:*",
+		"@hono/node-server": "^1.13.4",
+		"hono": "^4.6.8",
+		"passkit-generator": "^3.2.0"
+	},
+	"peerDependencies": {
+		"hono": "^4.6.8"
+	},
+	"dependencies": {
+		"passkit-webservice-toolkit": "workspace:^"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"exports": {
+		".": "./lib/index.js",
+		"./v1": "./lib/middlewares/v1/index.js",
+		"./v1/*": "./lib/middlewares/v1/*"
+	},
+	"files": [
+		"lib/**/*.+(js|d.ts)"
+	]
+}
