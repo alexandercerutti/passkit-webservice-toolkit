@@ -1,0 +1,18 @@
+{
+	"extends": "../tsconfig.json",
+	"compilerOptions": {
+		"declaration": false,
+		"types": ["@types/node"],
+		"rootDir": "./",
+		"outDir": "./build",
+		"target": "ESNext",
+		"module": "NodeNext",
+		"lib": ["ESNext"],
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true
+	},
+	"ts-node": {
+		"swc": true
+	},
+	"include": ["./**/*"]
+}
