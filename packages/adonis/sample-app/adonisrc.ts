@@ -3,6 +3,7 @@ import { defineConfig } from "@adonisjs/core/app";
 export default defineConfig({
 	directories: {
 		config: "./src/config",
+		tests: "specs",
 	},
 	/*
   |--------------------------------------------------------------------------
@@ -42,7 +43,19 @@ export default defineConfig({
   |
   */
 	preloads: [
-		() => import("./src/start/routes.js"),
+		{
+			file: () => import("./src/start/routes.js"),
+			environment: ["console", "repl"],
+		},
 		() => import("./src/start/kernel.js"),
 	],
+
+	tests: {
+		suites: [
+			{
+				name: "functional",
+				files: ["specs/**/*.test.mjs"],
+			},
+		],
+	},
 });
