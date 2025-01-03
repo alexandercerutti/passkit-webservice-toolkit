@@ -23,7 +23,9 @@
 		"pino-pretty": "^13.0.0",
 		"prettier": "^3.4.2",
 		"ts-node-maintained": "^10.9.4",
-		"typescript": "~5.7"
+		"typescript": "~5.7",
+		"@japa/runner": "^3.1.4",
+		"@japa/assert": "^4.0.0"
 	},
 	"dependencies": {
 		"@adonisjs/core": "^6.17.0",
