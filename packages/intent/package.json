@@ -32,7 +32,8 @@
 		"@intentjs/core": "^0.1.38"
 	},
 	"dependencies": {
-		"passkit-webservice-toolkit": "workspace:^"
+		"passkit-webservice-toolkit": "workspace:^",
+		"tslib": "^2.6.2"
 	},
 	"engines": {
 		"node": ">=20"
