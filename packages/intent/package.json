@@ -1,0 +1,48 @@
+{
+	"name": "intent-passkit-webservice",
+	"version": "1.0.0",
+	"description": "IntentJS integration of Apple Wallet web services",
+	"scripts": {
+		"build": "rm -rf lib && pnpm tsc",
+		"test": "pnpm build && node --test",
+		"run:server": "node specs/server.mjs",
+		"prepublish": "pnpm test"
+	},
+	"keywords": [
+		"apple wallet",
+		"passkit",
+		"passbook",
+		"intentjs"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/alexandercerutti/passkit-webservice-toolkit",
+		"directory": "packages/intent"
+	},
+	"bugs": "https://github.com/alexandercerutti/passkit-webservice-toolkit/issues",
+	"type": "module",
+	"author": "Alexander Patrick Cerutti",
+	"license": "ISC",
+	"devDependencies": {
+		"@intentjs/core": "^0.1.38",
+		"intent-passkit-webservice": "workspace:*",
+		"passkit-generator": "^3.1.11"
+	},
+	"peerDependencies": {
+		"@intentjs/core": "^0.1.38"
+	},
+	"dependencies": {
+		"passkit-webservice-toolkit": "workspace:^"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"exports": {
+		".": "./lib/index.js",
+		"./v1": "./lib/plugins/v1/index.js",
+		"./v1/*": "./lib/plugins/v1/*"
+	},
+	"files": [
+		"lib/**/*.+(js|d.ts)!(*.map)"
+	]
+}
