@@ -1,5 +1,5 @@
 import { IntentApplicationContext, ServiceProvider } from "@intentjs/core";
-import { IndexService } from "app/services";
+import { IndexService } from "app/services/index.js";
 
 export class AppServiceProvider extends ServiceProvider {
 	/**

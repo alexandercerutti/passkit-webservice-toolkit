@@ -6,7 +6,7 @@ import {
 	MiddlewareConfigurator,
 	Type,
 } from "@intentjs/core";
-import { IndexController } from "./controllers";
+import { IndexController } from "./controllers/index.js";
 import { Server } from "@intentjs/hyper-express";
 
 export class HttpKernel extends Kernel {

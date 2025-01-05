@@ -3,16 +3,9 @@
 	"version": "0.0.3",
 	"description": "A starter template for intent application",
 	"author": "Vinayak Sarawagi <vinayaksarawagi25@gmail.com>",
-	"private": false,
+	"private": true,
 	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/intentjs/new-app-starter.git"
-	},
-	"bugs": {
-		"url": "https://github.com/intentjs/new-app-starter/issues"
-	},
-	"homepage": "https://github.com/intentjs/new-app-starter",
+	"type": "module",
 	"scripts": {
 		"build": "pnpm intent build",
 		"start": "pnpm intent start",

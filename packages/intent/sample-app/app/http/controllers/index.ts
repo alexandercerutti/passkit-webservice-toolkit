@@ -1,5 +1,5 @@
 import { Controller, Get, Req, Request, Res, Response } from "@intentjs/core";
-import { IndexService } from "app/services";
+import { IndexService } from "app/services/index.js";
 
 @Controller()
 export class IndexController {

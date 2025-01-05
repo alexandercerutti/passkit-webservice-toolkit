@@ -1,7 +1,7 @@
 import { IntentAppContainer, IntentProvidersFactory } from "@intentjs/core";
-import { AppServiceProvider } from "./sp/app";
-import { ConsoleServiceProvider } from "./sp/console";
-import config from "config";
+import { AppServiceProvider } from "./sp/app.js";
+import { ConsoleServiceProvider } from "./sp/console.js";
+import config from "../../config/index.js";
 
 export class ApplicationContainer extends IntentAppContainer {
 	build() {

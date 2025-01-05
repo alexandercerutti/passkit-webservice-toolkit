@@ -1,8 +1,8 @@
 {
-  "sourceRoot": "app",
-  "serverFile": "main",
-  "debug": true,
-  "compilerOptions": {
-    "deleteOutDir": true
-  }
+	"sourceRoot": "app",
+	"serverFile": "main",
+	"debug": true,
+	"compilerOptions": {
+		"deleteOutDir": true
+	}
 }

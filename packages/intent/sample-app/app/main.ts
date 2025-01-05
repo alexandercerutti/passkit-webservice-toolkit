@@ -1,7 +1,7 @@
-import { HttpKernel } from './http/kernel';
-import { ApplicationContainer } from './boot/container';
-import { ApplicationExceptionFilter } from './errors/filter';
-import { IntentHttpServer } from '@intentjs/core';
+import { HttpKernel } from "./http/kernel.js";
+import { ApplicationContainer } from "./boot/container.js";
+import { ApplicationExceptionFilter } from "./errors/filter.js";
+import { IntentHttpServer } from "@intentjs/core";
 
 const server = IntentHttpServer.init();
 

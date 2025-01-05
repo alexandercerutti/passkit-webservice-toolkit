@@ -1,7 +1,7 @@
-import app from "./app";
-import logger from "./logger";
-import localization from "./localization";
-import queue from "./queue";
-import http from "./http";
+import app from "./app.js";
+import logger from "./logger.js";
+import localization from "./localization.js";
+import queue from "./queue.js";
+import http from "./http.js";
 
 export default [app, localization, logger, queue, http];
