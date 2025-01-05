@@ -60,6 +60,15 @@ export default configNamespace(
 		 */
 		port: +process.env.APP_PORT || 5000,
 
+		/**
+		 * This has been hardcoded even if the default.
+		 * Will have to be remain here for this issue:
+		 *
+		 * @see https://github.com/intentjs/intent/issues/57
+		 */
+
+		hostname: "0.0.0.0",
+
 		error: {
 			/**
 			 * -----------------------------------------------------
