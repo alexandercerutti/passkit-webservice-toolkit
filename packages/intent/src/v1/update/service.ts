@@ -24,10 +24,6 @@ export class UpdateService {
 	}
 
 	/**
-	 * Return `true` if the registration has been successful (HTTP 201)
-	 * Otherwise `false` to tell Apple the SN has been already registered
-	 * for the device (HTTP 200).
-	 *
 	 * This method **must** get overridden when using this service, like
 	 * below:
 	 *
