@@ -3,6 +3,12 @@
 	"compilerOptions": {
 		"rootDir": "src",
 		"outDir": "lib",
+		/**
+		 * This is required for service injection inside controller.
+		 * This is also already available in the sample-app when it gets
+		 * created
+		 */
+		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true
 	},
 	"include": ["src/**/*"]
