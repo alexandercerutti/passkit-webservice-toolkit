@@ -1,4 +1,5 @@
-import { QueueOptions, configNamespace } from "@intentjs/core";
+import { configNamespace } from "@intentjs/core";
+import type { QueueOptions, RegisterNamespaceReturnType } from "@intentjs/core";
 
 /**
  * CRASHES WITHOUT A QUEUE SERVICE. JUST WHY.
@@ -16,4 +17,4 @@ export default configNamespace("queue", (): QueueOptions => {
 			},
 		},
 	};
-});
+}) as RegisterNamespaceReturnType<"queue", QueueOptions>;

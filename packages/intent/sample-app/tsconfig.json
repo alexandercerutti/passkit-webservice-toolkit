@@ -3,7 +3,6 @@
 		"jsx": "react-jsx",
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
-		"declaration": true,
 		"removeComments": true,
 		"esModuleInterop": true,
 		"emitDecoratorMetadata": true,
@@ -19,7 +18,9 @@
 		"noImplicitAny": false,
 		"strictBindCallApply": false,
 		"forceConsistentCasingInFileNames": false,
-		"noFallthroughCasesInSwitch": false
+		"noFallthroughCasesInSwitch": false,
+
+		"composite": true,
 	},
 	"include": ["app", "bin", "libs", "config"],
 	"exclude": ["node_modules", "dist"],

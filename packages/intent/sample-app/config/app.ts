@@ -1,8 +1,11 @@
 import {
-	AppConfig,
 	toBoolean,
 	configNamespace,
 	ValidationErrorSerializer,
+} from "@intentjs/core";
+import type {
+	AppConfig,
+	RegisterNamespaceReturnType
 } from "@intentjs/core";
 
 export default configNamespace(
@@ -83,4 +86,4 @@ export default configNamespace(
 			validationErrorSerializer: ValidationErrorSerializer,
 		},
 	}),
-);
+) as RegisterNamespaceReturnType<"app", AppConfig>;

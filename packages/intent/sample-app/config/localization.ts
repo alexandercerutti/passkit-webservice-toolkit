@@ -1,4 +1,5 @@
-import { LocalizationOptions, configNamespace } from "@intentjs/core";
+import type { LocalizationOptions, RegisterNamespaceReturnType, } from "@intentjs/core";
+import { configNamespace } from "@intentjs/core";
 
 export default configNamespace(
 	"localization",
@@ -25,4 +26,4 @@ export default configNamespace(
 		 */
 		fallbackLang: "en",
 	}),
-);
+) satisfies RegisterNamespaceReturnType<"localization", LocalizationOptions>;

@@ -1,10 +1,13 @@
 import {
 	configNamespace,
 	Formats,
-	IntentLoggerOptions,
-	LogLevel,
 	toBoolean,
 	Transports,
+} from "@intentjs/core";
+import {
+	type LogLevel,
+	type IntentLoggerOptions,
+	type RegisterNamespaceReturnType,
 } from "@intentjs/core";
 
 export default configNamespace(
@@ -84,4 +87,4 @@ export default configNamespace(
 			},
 		},
 	}),
-);
+) as RegisterNamespaceReturnType<"logger", IntentLoggerOptions>;

@@ -1,5 +1,5 @@
-import { findProjectRoot, HttpConfig, configNamespace } from "@intentjs/core";
-import { join } from "path";
+import { configNamespace  } from "@intentjs/core";
+import type { HttpConfig, RegisterNamespaceReturnType } from "@intentjs/core";
 
 export default configNamespace(
 	"http",
@@ -25,4 +25,4 @@ export default configNamespace(
 		 */
 		staticServe: {},
 	}),
-);
+) as RegisterNamespaceReturnType<"http", HttpConfig>;
