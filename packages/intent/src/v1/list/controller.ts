@@ -15,7 +15,7 @@ export class ListController {
 	}
 
 	@Get(ListEndpoint.path)
-	async onListRetrieve<LastUpdatedFormat extends string>(
+	async onListRetrieve<LastUpdatedFormat>(
 		@Res() res: Response,
 		@Param(ListEndpoint.params[0]) deviceLibraryIdentifier: string,
 		@Param(ListEndpoint.params[1]) passTypeIdentifier: string,
