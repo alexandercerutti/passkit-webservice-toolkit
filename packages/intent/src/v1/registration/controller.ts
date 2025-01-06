@@ -2,10 +2,9 @@ import {
 	Body,
 	Controller,
 	Delete,
+	Header,
 	Param,
 	Post,
-	Req,
-	Request,
 	Res,
 	Response,
 } from "@intentjs/core";
@@ -47,15 +46,13 @@ export class RegistrationController {
 
 	@Post(RegisterEndpoint.path)
 	async onRegistration(
-		@Req() req: Request,
 		@Res() res: Response,
+		@Header("authorization") authorization: string,
+		@Body("pushToken") pushToken: string,
 		@Param(RegisterEndpoint.params[0]) deviceLibraryIdentifier: string,
 		@Param(RegisterEndpoint.params[1]) passTypeIdentifier: string,
 		@Param(RegisterEndpoint.params[2]) serialNumber: string,
-		@Body("pushToken") pushToken: string,
 	) {
-		const authorization = req.header("authorization");
-
 		if (!this.verifyToken(authorization)) {
 			// logger.info("Token validation failed.", authorization);
 			res.status(401).send();
@@ -76,14 +73,12 @@ export class RegistrationController {
 
 	@Delete(UnregisterEndpoint.path)
 	async onUnregistration(
-		@Req() req: Request,
 		@Res() res: Response,
+		@Header("authorization") authorization: string,
 		@Param(UnregisterEndpoint.params[0]) deviceLibraryIdentifier: string,
 		@Param(UnregisterEndpoint.params[1]) passTypeIdentifier: string,
 		@Param(UnregisterEndpoint.params[2]) serialNumber: string,
 	) {
-		const authorization = req.header("authorization");
-
 		if (!this.verifyToken(authorization)) {
 			// logger.info("Token validation failed.", authorization);
 			res.status(401).send();
