@@ -2,6 +2,10 @@ import { IntentApplicationContext, ServiceProvider } from "@intentjs/core";
 import { IndexService } from "app/services/index.js";
 import { RegistrationService } from "intent-passkit-webservice/v1/registration/service.js";
 import { LogService } from "intent-passkit-webservice/v1/log/service.js";
+import { UpdateService } from "intent-passkit-webservice/v1/update/service.js";
+import { createPass } from "app/utils/index.js";
+
+let lastUpdate: number;
 
 export class AppServiceProvider extends ServiceProvider {
 	/**
@@ -56,6 +60,42 @@ export class AppServiceProvider extends ServiceProvider {
 				console.log(logs);
 				console.groupEnd();
 				console.log("=========================");
+			},
+		});
+
+		this.bindWithValue(UpdateService, {
+			async onUpdateRequest(
+				passTypeIdentifier: string,
+				serialNumber: string,
+				modifiedSinceTimestamp: number,
+			) {
+				console.group("RECEIVED UPDATE REQUEST");
+				console.log("passTypeIdentifier:", passTypeIdentifier);
+				console.log("serialNumber:", serialNumber);
+				console.log("modifiedSinceTimestamp:", modifiedSinceTimestamp);
+				console.groupEnd();
+				console.log("=========================");
+
+				if (modifiedSinceTimestamp) {
+					console.log(new Date(modifiedSinceTimestamp), new Date(lastUpdate));
+				}
+
+				if (modifiedSinceTimestamp && modifiedSinceTimestamp >= lastUpdate) {
+					console.log("modifiedSinceTimestamp >= lastUpdate");
+					return undefined;
+				}
+
+				lastUpdate = Date.now();
+
+				const pass = await createPass(
+					{
+						voided: true,
+						passTypeIdentifier,
+					},
+					serialNumber,
+				);
+
+				return pass.getAsBuffer();
 			},
 		});
 	}
