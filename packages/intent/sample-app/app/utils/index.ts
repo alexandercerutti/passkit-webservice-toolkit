@@ -1,7 +1,7 @@
 import { networkInterfaces } from "node:os";
 import fs from "node:fs";
 import path from "node:path";
-import passKit from "passkit-generator";
+import passKit, { type OverridablePassProps } from "passkit-generator";
 const { PKPass } = passKit;
 
 const __dirname = import.meta.dirname;
@@ -62,7 +62,7 @@ function getRandomAirport(current: string = "") {
 }
 
 export async function createPass(
-	modifications?: Record<string, string>,
+	modifications?: OverridablePassProps,
 	serialNumber = String(Math.random() * 100),
 ) {
 	const pass = await PKPass.from(
