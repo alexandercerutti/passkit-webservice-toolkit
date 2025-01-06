@@ -1,6 +1,7 @@
 import { IntentApplicationContext, ServiceProvider } from "@intentjs/core";
 import { IndexService } from "app/services/index.js";
 import { RegistrationService } from "intent-passkit-webservice/v1/registration/service.js";
+import { LogService } from "intent-passkit-webservice/v1/log/service.js";
 
 export class AppServiceProvider extends ServiceProvider {
 	/**
@@ -46,6 +47,15 @@ export class AppServiceProvider extends ServiceProvider {
 			async tokenVerifier(token: string): Promise<boolean> {
 				console.log("Verifying token", token);
 				return true;
+			},
+		});
+
+		this.bindWithValue(LogService, {
+			onIncomingLogs(logs: string[]) {
+				console.group("Logs received");
+				console.log(logs);
+				console.groupEnd();
+				console.log("=========================");
 			},
 		});
 	}
