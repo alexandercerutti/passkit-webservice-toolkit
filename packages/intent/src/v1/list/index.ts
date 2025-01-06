@@ -1,2 +1,2 @@
-export { ListController } from "./controller.js";
-export { ListService } from "./service.js";
+export { ListController as Controller } from "./controller.js";
+export { ListService as Service } from "./service.js";

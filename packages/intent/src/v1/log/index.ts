@@ -1,2 +1,2 @@
-export { LogController } from "./controller.js";
-export { LogService } from "./service.js";
+export { LogController as Controller } from "./controller.js";
+export { LogService as Service } from "./service.js";

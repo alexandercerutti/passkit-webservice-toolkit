@@ -1,2 +1,2 @@
-export { RegistrationController } from "./controller.js";
-export { RegistrationService } from "./service.js";
+export { RegistrationController as Controller } from "./controller.js";
+export { RegistrationService as Service } from "./service.js";
