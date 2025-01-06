@@ -40,8 +40,8 @@
 	},
 	"exports": {
 		".": "./lib/index.js",
-		"./v1": "./lib/plugins/v1/index.js",
-		"./v1/*": "./lib/plugins/v1/*"
+		"./v1": "./lib/v1/index.js",
+		"./v1/*": "./lib/v1/*"
 	},
 	"files": [
 		"lib/**/*.+(js|d.ts)!(*.map)"
