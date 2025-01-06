@@ -5,7 +5,6 @@
 	"author": "Vinayak Sarawagi <vinayaksarawagi25@gmail.com>",
 	"private": true,
 	"license": "MIT",
-	"type": "module",
 	"scripts": {
 		"build": "pnpm intent build",
 		"start": "pnpm intent start",

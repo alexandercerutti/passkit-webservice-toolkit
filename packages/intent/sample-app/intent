@@ -15,9 +15,9 @@
 /**
  *  * Register hook to process TypeScript files using ts-node
  */
-import "ts-node/esm";
+require("ts-node").register();
 
 /**
  * Import console commands entrypoint
  */
-import "./dist/bin/console.js";
+require("./bin/console");

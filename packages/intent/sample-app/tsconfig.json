@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
 		"jsx": "react-jsx",
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext",
+		"module": "commonjs",
+		"moduleResolution": "Node10",
 		"removeComments": true,
 		"esModuleInterop": true,
 		"emitDecoratorMetadata": true,
@@ -20,14 +20,13 @@
 		"forceConsistentCasingInFileNames": false,
 		"noFallthroughCasesInSwitch": false,
 
-		"composite": true,
+		"composite": true
 	},
 	"include": ["app", "bin", "libs", "config"],
 	"exclude": ["node_modules", "dist"],
 	"ts-node": {
 		"swc": true,
 		"transpileOnly": true,
-		"require": ["tsconfig-paths/register"],
-		"esm": true
+		"require": ["tsconfig-paths/register"]
 	}
 }

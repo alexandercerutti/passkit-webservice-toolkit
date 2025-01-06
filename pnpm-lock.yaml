@@ -4,11 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  '@intentjs/cli':
-    hash: sp5worrpcjyhzrg7quvot3ajn4
-    path: patches/@intentjs__cli.patch
-
 importers:
 
   .:
@@ -140,7 +135,7 @@ importers:
     devDependencies:
       '@intentjs/cli':
         specifier: ^0.0.7
-        version: 0.0.7(patch_hash=sp5worrpcjyhzrg7quvot3ajn4)(@swc/helpers@0.5.13)
+        version: 0.0.7(@swc/helpers@0.5.13)
       '@nestjs/testing':
         specifier: ^10.0.0
         version: 10.4.15(@nestjs/common@10.4.15(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(@nestjs/core@10.4.15(@nestjs/common@10.4.15(class-transformer@0.5.1)(class-validator@0.14.1)(reflect-metadata@0.2.2)(rxjs@7.8.1))(encoding@0.1.13)(reflect-metadata@0.2.2)(rxjs@7.8.1))
@@ -1610,9 +1605,6 @@ packages:
 
   '@types/node@20.17.10':
     resolution: {integrity: sha512-/jrvh5h6NXhEauFFexRin69nA0uHJ5gwk4iDivp/DeoEua3uwCUto6PC86IpRITBOs4+6i2I56K5x5b6WYGXHA==}
-
-  '@types/node@20.17.11':
-    resolution: {integrity: sha512-Ept5glCK35R8yeyIeYlRIZtX6SLRyqMhOFTgj5SOkMpLTdw3SEHI9fHx60xaUZ+V1aJxQJODE+7/j5ocZydYTg==}
 
   '@types/node@22.10.2':
     resolution: {integrity: sha512-Xxr6BBRCAOQixvonOye19wnzyDiUtTeqldOOmj3CkeblonbccA12PFwlufvRdrpjXxqnmUaeiU5EOA+7s5diUQ==}
@@ -5720,7 +5712,7 @@ snapshots:
     dependencies:
       '@types/node': 20.17.10
 
-  '@intentjs/cli@0.0.7(patch_hash=sp5worrpcjyhzrg7quvot3ajn4)(@swc/helpers@0.5.13)':
+  '@intentjs/cli@0.0.7(@swc/helpers@0.5.13)':
     dependencies:
       '@swc/cli': 0.5.2(@swc/core@1.10.4(@swc/helpers@0.5.13))(chokidar@3.6.0)
       '@swc/core': 1.10.4(@swc/helpers@0.5.13)
@@ -6947,10 +6939,6 @@ snapshots:
   '@types/mime@1.3.5': {}
 
   '@types/node@20.17.10':
-    dependencies:
-      undici-types: 6.19.8
-
-  '@types/node@20.17.11':
     dependencies:
       undici-types: 6.19.8
 
@@ -9041,7 +9029,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 20.17.11
+      '@types/node': 20.17.10
       merge-stream: 2.0.0
       supports-color: 8.1.1
 

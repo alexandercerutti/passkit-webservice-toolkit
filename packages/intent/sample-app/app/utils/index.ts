@@ -1,10 +1,7 @@
 import { networkInterfaces } from "node:os";
 import fs from "node:fs";
 import path from "node:path";
-import passKit, { type OverridablePassProps } from "passkit-generator";
-const { PKPass } = passKit;
-
-const __dirname = import.meta.dirname;
+import { PKPass, type OverridablePassProps } from "passkit-generator";
 console.log("DIRNAME", __dirname);
 
 const intentPluginPackageRoot = path.resolve(__dirname, "../../../..");
