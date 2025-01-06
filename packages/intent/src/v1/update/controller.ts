@@ -1,8 +1,9 @@
 import { Controller, Get, Header, Param, Res, Response } from "@intentjs/core";
-import { UpdateEndpoint } from "passkit-webservice-toolkit/v1/update.js";
+import { v1 } from "passkit-webservice-toolkit";
 import { UpdateService } from "./service.js";
-import { getAuthorizationToken } from "passkit-webservice-toolkit/v1/utils/auth.js";
 import { ServiceMethodNotReplacedError } from "../../ServiceMethodNotReplaced.js";
+
+const { getAuthorizationToken, UpdateEndpoint } = v1;
 
 @Controller()
 export class UpdateController {

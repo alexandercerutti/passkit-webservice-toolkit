@@ -8,11 +8,11 @@ import {
 	Res,
 	Response,
 } from "@intentjs/core";
-import { RegisterEndpoint } from "passkit-webservice-toolkit/v1/register.js";
-import { UnregisterEndpoint } from "passkit-webservice-toolkit/v1/unregister.js";
+import { v1 } from "passkit-webservice-toolkit";
 import { RegistrationService } from "./service.js";
-import { getAuthorizationToken } from "passkit-webservice-toolkit/v1/utils/auth.js";
 import { ServiceMethodNotReplacedError } from "../../ServiceMethodNotReplaced.js";
+
+const { getAuthorizationToken, RegisterEndpoint, UnregisterEndpoint } = v1;
 
 @Controller()
 export class RegistrationController {

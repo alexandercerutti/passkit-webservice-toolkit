@@ -1,6 +1,8 @@
 import { Injectable } from "@intentjs/core";
 import { ServiceMethodNotReplacedError } from "../../ServiceMethodNotReplaced.js";
-import { SerialNumbers } from "passkit-webservice-toolkit/v1/list.js";
+import type { v1 } from "passkit-webservice-toolkit";
+
+type SerialNumbers = v1.SerialNumbers;
 
 @Injectable()
 export class ListService {

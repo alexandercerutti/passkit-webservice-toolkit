@@ -1,10 +1,14 @@
 import { IntentApplicationContext, ServiceProvider } from "@intentjs/core";
 import { IndexService } from "app/services/index.js";
-import { RegistrationService } from "intent-passkit-webservice/v1/registration/service.js";
-import { LogService } from "intent-passkit-webservice/v1/log/service.js";
-import { UpdateService } from "intent-passkit-webservice/v1/update/service.js";
-import { ListService } from "intent-passkit-webservice/v1/list/service.js";
+import { v1 } from "intent-passkit-webservice";
 import { createPass } from "app/utils/index.js";
+
+const {
+	Registration: { Service: RegistrationService },
+	Log: { Service: LogService },
+	Update: { Service: UpdateService },
+	List: { Service: ListService },
+} = v1;
 
 let lastUpdate: number;
 

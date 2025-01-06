@@ -1,7 +1,9 @@
 import { Controller, Get, Param, Query, Res, Response } from "@intentjs/core";
-import { ListEndpoint } from "passkit-webservice-toolkit/v1/list.js";
+import { v1 } from "passkit-webservice-toolkit";
 import { ListService } from "./service.js";
 import { ServiceMethodNotReplacedError } from "../../ServiceMethodNotReplaced.js";
+
+const { ListEndpoint } = v1;
 
 @Controller()
 export class ListController {

@@ -1,7 +1,9 @@
 import { Body, Controller, Post, Res, Response } from "@intentjs/core";
-import { LogEndpoint } from "passkit-webservice-toolkit/v1/log.js";
+import { v1 } from "passkit-webservice-toolkit";
 import { LogService } from "./service.js";
 import { ServiceMethodNotReplacedError } from "../../ServiceMethodNotReplaced.js";
+
+const { LogEndpoint } = v1;
 
 @Controller()
 export class LogController {
