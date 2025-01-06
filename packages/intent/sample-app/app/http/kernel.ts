@@ -8,6 +8,7 @@ import {
 } from "@intentjs/core";
 import { IndexController } from "./controllers/index.js";
 import { Server } from "@intentjs/hyper-express";
+import { RegistrationController } from "intent-passkit-webservice/v1/registration/controller.js";
 
 export class HttpKernel extends Kernel {
 	/**
@@ -15,7 +16,7 @@ export class HttpKernel extends Kernel {
 	 * Read more - https://tryintent.com/docs/controllers
 	 */
 	public controllers(): Type<any>[] {
-		return [IndexController];
+		return [IndexController, RegistrationController];
 	}
 
 	/**

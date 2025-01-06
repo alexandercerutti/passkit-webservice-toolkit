@@ -51,7 +51,7 @@ export class RegistrationService {
 		_passTypeIdentifier: string,
 		_serialNumber: string,
 		_pushToken: string,
-	) {
+	): Promise<boolean> {
 		throw new ServiceMethodNotReplacedError(
 			"onRegister",
 			"registration/service",
@@ -82,7 +82,7 @@ export class RegistrationService {
 		_deviceLibraryIdentifier: string,
 		_passTypeIdentifier: string,
 		_serialNumber: string,
-	) {
+	): Promise<void> {
 		throw new ServiceMethodNotReplacedError(
 			"onUnregister",
 			"registration/service",
