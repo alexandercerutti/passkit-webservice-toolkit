@@ -10,14 +10,16 @@ export class LogService {
 	 * @example
 	 *
 	 * ```js
-	 * this.bindWithValue(LogController, {
-	 * 	onIncomingLogs(
+	 * this.bindWithValue(LogService, {
+	 *		onIncomingLogs(
 	 *			logs: string[]
 	 *		): void {
 	 *			...
 	 *		}
 	 * })
 	 * ```
+	 *
+	 * @param {string[]} _logs
 	 *
 	 * @see https://developer.apple.com/documentation/walletpasses/log_a_message
 	 */

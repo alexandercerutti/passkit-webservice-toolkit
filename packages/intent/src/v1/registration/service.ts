@@ -10,12 +10,14 @@ export class RegistrationService {
 	 * @example
 	 *
 	 * ```js
-	 * this.bindWithValue(RegistrationController, {
-	 * 	async tokenVerifier(token: string): PromiseLike<boolean> {
+	 * this.bindWithValue(RegistrationService, {
+	 *		async tokenVerifier(token: string): PromiseLike<boolean> {
 	 *		...
-	 * 	}
+	 *		}
 	 * })
 	 * ```
+	 *
+	 * @param {string} _token
 	 */
 	public async tokenVerifier(_token: string) {
 		return true;
@@ -26,14 +28,14 @@ export class RegistrationService {
 	 * Otherwise `false` to tell Apple the SN has been already registered
 	 * for the device (HTTP 200).
 	 *
-	 * This method **must** get overridden when using this controller, like
+	 * This method **must** get overridden when using this service, like
 	 * below:
 	 *
 	 * @example
 	 *
 	 * ```js
-	 * this.bindWithValue(RegistrationController, {
-	 * 	async onRegister(
+	 * this.bindWithValue(RegistrationService, {
+	 *		async onRegister(
 	 *			deviceLibraryIdentifier: string,
 	 *			passTypeIdentifier: string,
 	 *			serialNumber: string,
@@ -43,6 +45,12 @@ export class RegistrationService {
 	 *		}
 	 * })
 	 * ```
+	 *
+	 * @param {string} _deviceLibraryIdentifier
+	 * @param {string} _passTypeIdentifier
+	 * @param {string} _serialNumber
+	 * @param {string} _pushToken
+	 * @return {Promise<boolean>}
 	 *
 	 * @see https://developer.apple.com/documentation/walletpasses/register_a_pass_for_update_notifications
 	 */
@@ -59,14 +67,14 @@ export class RegistrationService {
 	}
 
 	/**
-	 * This method **must** get overridden when using this controller, like
+	 * This method **must** get overridden when using this service, like
 	 * below:
 	 *
 	 * @example
 	 *
 	 * ```js
-	 * this.bindWithValue(RegistrationController, {
-	 * 	async onUnregister(
+	 * this.bindWithValue(RegistrationService, {
+	 *		async onUnregister(
 	 *			deviceLibraryIdentifier: string,
 	 *			passTypeIdentifier: string,
 	 *			serialNumber: string,
@@ -75,6 +83,10 @@ export class RegistrationService {
 	 *		}
 	 * })
 	 * ```
+	 *
+	 * @param {string} _deviceLibraryIdentifier
+	 * @param {string} _passTypeIdentifier
+	 * @param {string} _serialNumber
 	 *
 	 * @see https://developer.apple.com/documentation/walletpasses/unregister_a_pass_for_update_notifications
 	 */
