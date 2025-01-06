@@ -11,6 +11,7 @@ import { Server } from "@intentjs/hyper-express";
 import { RegistrationController } from "intent-passkit-webservice/v1/registration/controller.js";
 import { LogController } from "intent-passkit-webservice/v1/log/controller.js";
 import { UpdateController } from "intent-passkit-webservice/v1/update/controller.js";
+import { ListController } from "intent-passkit-webservice/v1/list/controller.js";
 
 export class HttpKernel extends Kernel {
 	/**
@@ -23,6 +24,7 @@ export class HttpKernel extends Kernel {
 			RegistrationController,
 			LogController,
 			UpdateController,
+			ListController,
 		];
 	}
 
