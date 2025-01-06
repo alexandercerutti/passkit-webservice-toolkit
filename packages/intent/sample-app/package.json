@@ -15,7 +15,7 @@
 		"test:e2e": "pnpm jest --config ./test/jest-e2e.json"
 	},
 	"dependencies": {
-		"@intentjs/core": "^0.1.36",
+		"@intentjs/core": "^0.1.40",
 		"@intentjs/hyper-express": "^0.0.4",
 		"class-transformer": "^0.5.1",
 		"class-validator": "^0.14.1",

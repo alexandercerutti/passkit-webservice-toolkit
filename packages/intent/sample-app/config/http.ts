@@ -1,4 +1,4 @@
-import { configNamespace  } from "@intentjs/core";
+import { configNamespace } from "@intentjs/core";
 import type { HttpConfig, RegisterNamespaceReturnType } from "@intentjs/core";
 
 export default configNamespace(
@@ -18,11 +18,5 @@ export default configNamespace(
 			allowedHeaders: ["Content-Type", "Authorization"],
 			credentials: true,
 		},
-
-		/**
-		 * Optional property in TS, but code crashes if
-		 * it doesn't exist. Thank you.
-		 */
-		staticServe: {},
 	}),
 ) as RegisterNamespaceReturnType<"http", HttpConfig>;

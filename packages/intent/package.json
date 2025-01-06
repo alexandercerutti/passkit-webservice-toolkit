@@ -25,12 +25,12 @@
 	"author": "Alexander Patrick Cerutti",
 	"license": "ISC",
 	"devDependencies": {
-		"@intentjs/core": "^0.1.38",
+		"@intentjs/core": "^0.1.40",
 		"intent-passkit-webservice": "workspace:*",
 		"passkit-generator": "^3.1.11"
 	},
 	"peerDependencies": {
-		"@intentjs/core": "^0.1.38"
+		"@intentjs/core": "^0.1.40"
 	},
 	"dependencies": {
 		"passkit-webservice-toolkit": "workspace:^",
