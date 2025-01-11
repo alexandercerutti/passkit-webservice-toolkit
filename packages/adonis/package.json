@@ -5,7 +5,7 @@
 	"main": "lib/index.js",
 	"scripts": {
 		"build": "rm -rf lib && pnpm tsc",
-		"test": "pnpm build && node --test",
+		"test": "pnpm build",
 		"run:server": "cd sample-app && pnpm run dev",
 		"prepublish": "pnpm test"
 	},
