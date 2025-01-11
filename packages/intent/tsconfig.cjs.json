@@ -1,0 +1,10 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"target": "ES2018",
+		"module": "CommonJS",
+		"moduleResolution": "Node10",
+		"outDir": "lib"
+	},
+	"include": ["src/**/*"]
+}
