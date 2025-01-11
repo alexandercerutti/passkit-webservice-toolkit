@@ -8,14 +8,10 @@ import {
 } from "@intentjs/core";
 import { IndexController } from "./controllers/index.js";
 import { Server } from "@intentjs/hyper-express";
-import { v1 } from "intent-passkit-webservice";
-
-const {
-	Log: { Controller: LogController },
-	Update: { Controller: UpdateController },
-	List: { Controller: ListController },
-	Registration: { Controller: RegistrationController },
-} = v1;
+import RegistrationController from "./controllers/ExtendedRegistrationController.js";
+import LogController from "./controllers/ExtendedLogController.js";
+import UpdateController from "./controllers/ExtendedUpdateController.js";
+import ListController from "./controllers/ExtendedListController.js";
 
 export class HttpKernel extends Kernel {
 	/**

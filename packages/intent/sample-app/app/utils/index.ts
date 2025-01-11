@@ -82,7 +82,7 @@ export async function createPass(
 			serialNumber,
 			webServiceURL: `http://${
 				Object.entries(IPV4Interfaces)[0][1][0].address
-			}:5001`,
+			}:5001/pass`,
 			authenticationToken: "mimmomimmoqgeqwyidukqq",
 			voided: false,
 			...modifications,
