@@ -174,6 +174,13 @@ fastifyInstance.register(import("fastify-passkit-webservice/v1/log.js"), {
 	},
 });
 
+/**
+ * Hardcode your pass serial number here, or
+ * change the whole code to save it when registration
+ * and unregistration happens.
+ */
+let passSerialNumber = "24.669178769999455";
+
 fastifyInstance.register(
 	import("fastify-passkit-webservice/v1/registration.js"),
 	{
@@ -181,12 +188,14 @@ fastifyInstance.register(
 			deviceLibraryIdentifier,
 			passTypeIdentifier,
 			serialNumber,
+			pushToken,
 		) {
 			console.log(
 				"RECEIVED REGISTER REQUEST",
 				deviceLibraryIdentifier,
 				passTypeIdentifier,
 				serialNumber,
+				pushToken,
 			);
 
 			return true;
@@ -224,7 +233,7 @@ fastifyInstance.register(import("fastify-passkit-webservice/v1/list.js"), {
 		);
 
 		return {
-			serialNumbers: ["askdfgas"],
+			serialNumbers: [passSerialNumber],
 			lastUpdated: `${Date.now()}`,
 		};
 	},
