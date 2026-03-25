@@ -28,7 +28,7 @@
 		"prettier": "^3.4.2",
 		"sinon": "^19.0.2",
 		"ts-node-maintained": "^10.9.4",
-		"typescript": "~5.7"
+		"typescript": "~6.0.2"
 	},
 	"dependencies": {
 		"@adonisjs/core": "^6.17.0",
@@ -41,16 +41,5 @@
 			"./src/app/controllers/**/*.ts",
 			"./src/app/middleware/*.ts"
 		]
-	},
-	"overrides": {
-		"strtok3": "8.0.1"
-	},
-	"resolutions": {
-		"strtok3": "8.0.1"
-	},
-	"pnpm": {
-		"overrides": {
-			"strtok3": "8.0.1"
-		}
 	}
 }
