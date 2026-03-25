@@ -1,6 +1,6 @@
 {
 	"name": "fastify-passkit-webservice",
-	"version": "1.4.2",
+	"version": "1.4.3",
 	"description": "Fastify integration of Apple Wallet web services",
 	"scripts": {
 		"clean": "rm -rf lib *.tsbuildinfo",
