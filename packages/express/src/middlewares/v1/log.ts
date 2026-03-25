@@ -31,7 +31,7 @@ export default function LogRouter(opts: LogRouterOptions): Router {
 		LogEndpoint.path,
 		async (request, response) => {
 			opts.onIncomingLogs(request.body.logs);
-			response.status(200);
+			response.status(200).send();
 		},
 	);
 
