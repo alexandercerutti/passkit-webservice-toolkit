@@ -3,7 +3,10 @@
 	"compilerOptions": {
 		"module": "CommonJS",
 		"moduleResolution": "Node10",
-		"outDir": "lib/cjs"
+		"outDir": "lib/cjs",
+		// To ignore Node10 deprecation. When it will be removed, we'll remove
+		// The whole CJS compilation target
+		"ignoreDeprecations": "6.0"
 	},
-	"include": ["src/**/*"]
+	"include": ["./src/**/*"]
 }

@@ -8,5 +8,5 @@
 		"outDir": "lib/esm",
 		"declaration": true
 	},
-	"include": ["src/**/*"]
+	"include": ["./src/**/*"]
 }

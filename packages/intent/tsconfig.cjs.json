@@ -4,7 +4,10 @@
 		"target": "ES2018",
 		"module": "CommonJS",
 		"moduleResolution": "Node10",
-		"outDir": "lib"
+		"outDir": "./lib",
+		// To ignore Node10 deprecation. When it will be removed, we'll remove
+		// The whole CJS compilation target
+		"ignoreDeprecations": "6.0"
 	},
-	"include": ["src/**/*"]
+	"include": ["./src/**/*"]
 }

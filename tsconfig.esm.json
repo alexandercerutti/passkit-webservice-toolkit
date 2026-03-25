@@ -5,5 +5,5 @@
 		"moduleResolution": "Node16",
 		"outDir": "lib/esm"
 	},
-	"include": ["src/**/*"]
+	"include": ["./src/**/*"]
 }

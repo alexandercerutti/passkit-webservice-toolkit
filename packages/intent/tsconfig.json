@@ -1,7 +1,7 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
-		"rootDir": "src",
+		"rootDir": "./src",
 		/**
 		 * This is required for service injection inside controller.
 		 * This is also already available in the sample-app when it gets
@@ -10,5 +10,5 @@
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true
 	},
-	"include": ["src/**/*"]
+	"include": ["./src/**/*"]
 }

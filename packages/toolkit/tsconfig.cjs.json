@@ -6,7 +6,10 @@
 		"moduleResolution": "Node10",
 		"sourceMap": true,
 		"outDir": "lib/cjs",
-		"declaration": true
+		"declaration": true,
+		// To ignore Node10 deprecation. When it will be removed, we'll remove
+		// The whole CJS compilation target
+		"ignoreDeprecations": "6.0"
 	},
-	"include": ["src/**/*"]
+	"include": ["./src/**/*"]
 }

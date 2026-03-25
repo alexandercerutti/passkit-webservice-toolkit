@@ -89,10 +89,10 @@ async function createPass(
 			model: "../../../passkit-generator/examples/models/exampleBooking.pass",
 			certificates: {
 				signerCert: fs.readFileSync(
-					"../../../passkit-generator/certificates/signerCert.pem",
+					"../../../passkit-generator/certificates/certs/signerCert.pem",
 				),
 				signerKey: fs.readFileSync(
-					"../../../passkit-generator/certificates/signerKey.pem",
+					"../../../passkit-generator/certificates/certs/signerKey.pem",
 				),
 				wwdr: fs.readFileSync(
 					"../../../passkit-generator/certificates/WWDRG4.pem",
@@ -252,18 +252,18 @@ fastifyInstance.register(import("fastify-passkit-webservice/v1/update.js"), {
 			modifiedSinceTimestamp,
 		);
 
-		if (modifiedSinceTimestamp) {
-			console.log(new Date(modifiedSinceTimestamp), new Date(lastUpdate));
-		}
+		// if (modifiedSinceTimestamp) {
+		// 	console.log(new Date(modifiedSinceTimestamp), new Date(lastUpdate));
+		// }
 
-		if (modifiedSinceTimestamp && modifiedSinceTimestamp >= lastUpdate) {
-			console.log("modifiedSinceTimestamp >= lastUpdate");
-			return undefined;
-		}
+		// if (modifiedSinceTimestamp && modifiedSinceTimestamp >= lastUpdate) {
+		// 	console.log("modifiedSinceTimestamp >= lastUpdate");
+		// 	return undefined;
+		// }
 
 		const pass = await createPass(
 			{
-				voided: true,
+				voided: false,
 				passTypeIdentifier,
 			},
 			serialNumber,
