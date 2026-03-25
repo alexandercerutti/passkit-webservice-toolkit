@@ -24,7 +24,7 @@ interface UpdateRouterOptions {
 		passTypeIdentifier: string,
 		serialNumber: string,
 		modifiedSinceTimestamp?: number | undefined,
-	): PromiseLike<Uint8Array | undefined>;
+	): PromiseLike<Uint8Array<ArrayBuffer> | undefined>;
 }
 
 export default function UpdateRouter(opts: UpdateRouterOptions): Hono {
@@ -74,7 +74,7 @@ export default function UpdateRouter(opts: UpdateRouterOptions): Hono {
 			context.header("Content-Type", "application/vnd.apple.pkpass");
 			context.header("last-modified", new Date().toUTCString());
 			context.status(200);
-			return context.body(updateResponse);
+			return context.body(updateResponse.buffer);
 		},
 	);
 

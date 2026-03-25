@@ -1,4 +1,5 @@
 import { Controller, Get, Header, Param, Res, Response } from "@intentjs/core";
+import { Buffer } from "node:buffer";
 import { v1 } from "passkit-webservice-toolkit";
 import { UpdateService } from "./service.js";
 import { ServiceMethodNotReplacedError } from "../../ServiceMethodNotReplaced.js";
@@ -74,6 +75,6 @@ export class UpdateController {
 			.header("Content-Type", "application/vnd.apple.pkpass")
 			.header("last-modified", new Date().toUTCString())
 			.status(200)
-			.send(updateResponse);
+			.send(Buffer.from(updateResponse));
 	}
 }

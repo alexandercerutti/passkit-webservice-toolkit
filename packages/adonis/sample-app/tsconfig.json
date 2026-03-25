@@ -1,6 +1,7 @@
 {
 	"extends": "../tsconfig.json",
 	"compilerOptions": {
+		"composite": false,
 		"declaration": false,
 		"types": ["@types/node"],
 		"rootDir": "./",

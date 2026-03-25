@@ -4,7 +4,8 @@
 	"description": "Express.js integration for Apple Wallet web services",
 	"main": "lib/index.js",
 	"scripts": {
-		"build": "rm -rf lib && pnpm tsc",
+		"clean": "rm -rf lib *.tsbuildinfo",
+		"build": "pnpm tsc --build",
 		"test": "pnpm build && node --test",
 		"run:server": "node specs/server.mjs",
 		"prepublish": "pnpm test"
