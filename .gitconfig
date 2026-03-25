@@ -1,0 +1,15 @@
+# This file should get imported manually when setting up the project
+# through the following shell command, that assumes you are in the
+# root folder:
+#
+#
+# $ git config --local include.path ../.gitconfig
+
+[merge]
+	ff = false
+[core]
+	editor = nano
+[alias]
+	adog = log --all --decorate --oneline --graph
+[pull]
+	ff = true
