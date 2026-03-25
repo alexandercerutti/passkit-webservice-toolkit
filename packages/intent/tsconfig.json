@@ -1,6 +1,13 @@
 {
 	"extends": "../../tsconfig.json",
 	"compilerOptions": {
+		"target": "ES2018",
+		"module": "CommonJS",
+		"moduleResolution": "Node10",
+		"outDir": "./lib",
+		// To ignore Node10 deprecation. When it will be removed, we'll remove
+		// The whole CJS compilation target
+		"ignoreDeprecations": "6.0",
 		"rootDir": "./src",
 		/**
 		 * This is required for service injection inside controller.
@@ -8,7 +15,9 @@
 		 * created
 		 */
 		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true
+		"experimentalDecorators": true,
+		"composite": true
 	},
-	"include": ["./src/**/*"]
+	"include": ["./src/**/*"],
+	"references": [{ "path": "../toolkit/tsconfig.json" }]
 }

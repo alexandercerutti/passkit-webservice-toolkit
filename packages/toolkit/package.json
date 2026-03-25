@@ -5,6 +5,7 @@
 	"type": "module",
 	"main": "./lib/cjs/index.js",
 	"scripts": {
+		"clean": "rm -rf lib *.tsbuildinfo",
 		"build": "rm -rf lib && pnpm tsc -b tsconfig.esm.json tsconfig.cjs.json && pnpm build:dual",
 		"build:dual": "pnpm tsconfig-to-dual-package tsconfig.esm.json tsconfig.cjs.json",
 		"test": "pnpm build && pnpm test:ts && node --test",

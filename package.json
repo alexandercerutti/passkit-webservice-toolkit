@@ -3,6 +3,7 @@
 	"private": true,
 	"description": "Collection of libraries to build integration with Apple Wallet Web Services",
 	"scripts": {
+		"clean": "pnpm -r run clean",
 		"build": "pnpm -r build",
 		"test": "pnpm -r test",
 		"bump": "pnpm lerna version",

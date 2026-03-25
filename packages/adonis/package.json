@@ -4,7 +4,8 @@
 	"description": "AdonisJS integration for Apple Wallet web services",
 	"main": "lib/index.js",
 	"scripts": {
-		"build": "rm -rf lib && pnpm tsc",
+		"clean": "rm -rf lib *.tsbuildinfo",
+		"build": "pnpm tsc --build",
 		"test": "pnpm build",
 		"run:server": "cd sample-app && pnpm run dev",
 		"prepublish": "pnpm test"
@@ -41,9 +42,18 @@
 		"node": ">=20.6"
 	},
 	"exports": {
-		".": "./lib/index.js",
-		"./v1": "./lib/plugins/v1/index.js",
-		"./v1/*": "./lib/plugins/v1/*"
+		".": {
+			"types": "./lib/index.d.ts",
+			"import": "./lib/index.js"
+		},
+		"./v1": {
+			"types": "./lib/plugins/v1/index.d.ts",
+			"import": "./lib/plugins/v1/index.js"
+		},
+		"./v1/*": {
+			"types": "./lib/plugins/v1/*.d.ts",
+			"import": "./lib/plugins/v1/*"
+		}
 	},
 	"files": [
 		"lib/**/*.+(js|d.ts)"
