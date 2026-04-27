@@ -15,7 +15,7 @@ export function assertAuthorizationSchemeValid(
 		response
 			.status(401)
 			.send(
-				`Apple Schema validation for Authorization header failed. Received: '${authorization}'`,
+				"Apple Schema validation for Authorization header failed.",
 			);
 		return;
 	}
@@ -41,9 +41,6 @@ export function assertTokenValid(
 		const token = getAuthorizationToken(authorization);
 
 		if (!(await verifyToken(token))) {
-			console.warn(
-				`Authorization token validation failed. Received: ${authorization}`,
-			);
 			response.status(401).send();
 			return;
 		}
