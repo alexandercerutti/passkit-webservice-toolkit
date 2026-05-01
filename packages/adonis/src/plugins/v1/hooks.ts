@@ -14,9 +14,7 @@ export async function assertAuthorizationSchemeValidMiddleware(
 	if (!isAuthorizationSchemeValid(authorization)) {
 		context.response
 			.status(401)
-			.send(
-				"Apple Schema validation for Authorization header failed.",
-			);
+			.send("Apple Schema validation for Authorization header failed.");
 		return;
 	}
 
@@ -34,13 +32,17 @@ export function assertTokenValidMiddleware(
 
 		const { authorization = "" } = context.request.headers();
 
-		const token = getAuthorizationToken(authorization);
+		try {
+			const token = getAuthorizationToken(authorization);
 
-		if (!(await verifyToken(token))) {
-			context.response.status(401).send({});
+			if (!(await verifyToken(token))) {
+				throw new Error("Token verifier rejected the provided token.");
+			}
+
+			return await next();
+		} catch (error) {
+			context.response.status(401).send(error);
 			return;
 		}
-
-		await next();
 	};
 }
