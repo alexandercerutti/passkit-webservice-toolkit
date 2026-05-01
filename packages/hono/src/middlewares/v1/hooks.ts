@@ -31,12 +31,21 @@ export function assertTokenValid(
 
 		const authorization = context.req.header("Authorization") || "";
 
-		const token = getAuthorizationToken(authorization);
+		let token: string = "";
 
-		if (!(await verifyToken(token))) {
+		try {
+			token = getAuthorizationToken(authorization);
+
+			const tokenValid = await verifyToken(token);
+
+			if (!tokenValid) {
+				throw new Error("Token verifier rejected the provided token.");
+			}
+		} catch (error) {
 			context.status(401);
+
 			return context.json({
-				message: "Authorization token validation failed.",
+				message: error instanceof Error ? error.message : "Invalid token.",
 			});
 		}
 
