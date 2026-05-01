@@ -18,7 +18,7 @@ export function checkAuthorizationSchemeValidationHook(
 	const { authorization = "" } = request.headers;
 
 	if (!isAuthorizationSchemeValid(authorization)) {
-		request.log.info({ authorization }, "Apple Schema validation failed");
+		request.log.info("Apple Schema validation for Authorization header failed.");
 		reply.code(401).send();
 		return;
 	}

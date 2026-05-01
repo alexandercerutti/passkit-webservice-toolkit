@@ -14,7 +14,7 @@ export async function assertAuthorizationSchemeValid(
 	if (!isAuthorizationSchemeValid(authorization)) {
 		context.status(401);
 		return context.json({
-			message: `Apple Schema validation for Authorization header failed. Received: '${authorization}'.`,
+			message: "Apple Schema validation for Authorization header failed.",
 		});
 	}
 
@@ -34,12 +34,9 @@ export function assertTokenValid(
 		const token = getAuthorizationToken(authorization);
 
 		if (!(await verifyToken(token))) {
-			console.warn(
-				`Authorization token validation failed. Received: ${authorization}`,
-			);
 			context.status(401);
 			return context.json({
-				message: `Authorization token validation failed. Received: ${authorization}`,
+				message: "Authorization token validation failed.",
 			});
 		}
 
