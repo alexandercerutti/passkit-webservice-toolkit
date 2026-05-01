@@ -14,9 +14,7 @@ export function assertAuthorizationSchemeValid(
 	if (!isAuthorizationSchemeValid(authorization)) {
 		response
 			.status(401)
-			.send(
-				"Apple Schema validation for Authorization header failed.",
-			);
+			.send("Apple Schema validation for Authorization header failed.");
 		return;
 	}
 
@@ -32,19 +30,22 @@ export function assertTokenValid(
 		next: NextFunction,
 	) {
 		if (typeof verifyToken !== "function") {
-			next();
-			return;
+			return next();
 		}
 
 		const { authorization = "" } = request.headers;
 
-		const token = getAuthorizationToken(authorization);
+		try {
+			const token = getAuthorizationToken(authorization);
 
-		if (!(await verifyToken(token))) {
+			if (!(await verifyToken(token))) {
+				throw new Error("Token verifier rejected the provided token.");
+			}
+
+			return next();
+		} catch (error) {
 			response.status(401).send();
 			return;
 		}
-
-		next();
 	};
 }
