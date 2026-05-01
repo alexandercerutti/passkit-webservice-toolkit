@@ -18,7 +18,9 @@ export function checkAuthorizationSchemeValidationHook(
 	const { authorization = "" } = request.headers;
 
 	if (!isAuthorizationSchemeValid(authorization)) {
-		request.log.info("Apple Schema validation for Authorization header failed.");
+		request.log.info(
+			"Apple Schema validation for Authorization header failed.",
+		);
 		reply.code(401).send();
 		return;
 	}
@@ -35,10 +37,14 @@ export function createTokenVerifierHook(
 	) {
 		const { authorization = "" } = request.headers;
 
-		const token = getAuthorizationToken(authorization);
+		try {
+			const token = getAuthorizationToken(authorization);
 
-		if (!(await verifyToken(token))) {
-			request.log.info("Token validation failed.");
+			if (!(await verifyToken(token))) {
+				throw new Error("Token verifier rejected the provided token.");
+			}
+		} catch (error) {
+			request.log.info({ error }, "Token validation failed.");
 			reply.code(401).send();
 			return;
 		}
