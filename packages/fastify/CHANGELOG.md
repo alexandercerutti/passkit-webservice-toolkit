@@ -1,5 +1,13 @@
 # Changelog
 
+### **1.4.1**
+
+**Changes**:
+
+ - Improved handling of errors and removed token logging (even if logged when wrong) (#5);
+
+---
+
 ### **1.4.0**
 
 **Changes**:
